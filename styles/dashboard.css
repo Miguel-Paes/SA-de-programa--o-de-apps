@@ -1,0 +1,58 @@
+main {
+  height: 100%;
+  padding: 20px 5px 0 5px;
+}
+
+.estacao-info {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.input-estacao {
+  display: flex;
+  border-radius: 50px;
+  padding: 5px;
+  gap: 3px;
+}
+
+.input{
+  display: flex;
+  background-color: #737373;
+  padding: 5px 3px;
+  border-top-left-radius: 50px;
+  border-bottom-left-radius: 50px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.input input {
+  background-color: #737373;
+  border: none;
+  color: white;
+  margin-left: 8px;
+}
+
+.input input:focus {
+  outline: none;
+}
+
+#search-button {
+  background-color: #fdb833;
+  color: black;
+  font-weight: 700;
+  padding: 0 3px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+
+#nao-sei-estacao {
+  background-color: black;
+  color: #fdb833;
+  border: solid 1px #fdb833;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 50px;
+}
