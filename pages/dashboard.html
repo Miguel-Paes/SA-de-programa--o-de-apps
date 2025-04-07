@@ -27,15 +27,65 @@
         <div class="input-estacao">
           <div class="input">
             <i class="bi bi-search"></i>
-            <input type="text" id="estacao" placeholder="Digite a estação mais próxima">
+            <select name="Estação" id="estacao-select">
+              <option value="estacao1">Estação 1</option>
+              <option value="estacao2">Estação 2</option>
+              <option value="estacao3">Estação 3</option>
+              <option value="estacao4">Estação 4</option>
+            </select>
           </div>
-          <button id="search-button">Search</button>
+          <button onclick="divMapa()" id="search-button">Search</button>
         </div>
   
         <div class="nao-sei-estacao-btn">
           <button id="nao-sei-estacao">Não sei a estação</button>
         </div>
       </div>
+
+      <div id="mapa" class="hidden">
+        <div class="mapa-form">
+          <div class="row">
+            <div class="form-item">
+              <input type="text" class="form-input" placeholder="CEP">
+            </div>
+  
+            <div class="form-item">
+              <input type="text" class="form-input" placeholder="Número">
+            </div>
+          </div>
+  
+          <div class="row">
+            <div class="form-item">
+              <input type="text" class="form-input" placeholder="Cidade">
+            </div>
+          
+  
+            <div class="form-item">
+              <input type="text" class="form-input" placeholder="Bairro">
+            </div>
+          </div>
+  
+            <div class="row">
+              <div class="form-item">
+                <input type="text" class="form-input" placeholder="Rua">
+              </div>
+    
+              <div class="form-item">
+                <input type="text" class="form-input" placeholder="Complemento">
+              </div>
+            </div>
+  
+              <div class="row">
+                <div class="form-item">
+                  <input type="text" class="form-input" placeholder="Ponto de Referência">
+                </div>
+      
+                <div class="form-item">
+                  <input type="text" class="form-input" placeholder="Hora de Saída">
+                </div>
+              </div>
+            </div>
+        </div>
     </main>
   
   <footer>
