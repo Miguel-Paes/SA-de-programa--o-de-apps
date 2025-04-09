@@ -34,11 +34,11 @@
               <option value="estacao4">Estação 4</option>
             </select>
           </div>
-          <button onclick="divMapa()" id="search-button">Search</button>
+          <button id="search-button">Search</button>
         </div>
   
         <div class="nao-sei-estacao-btn">
-          <button id="nao-sei-estacao">Não sei a estação</button>
+          <button onclick="showMap()" id="nao-sei-estacao">Não sei a estação</button>
         </div>
       </div>
 
@@ -84,10 +84,30 @@
                   <input type="text" class="form-input" placeholder="Hora de Saída">
                 </div>
               </div>
+
+              <div class="row-centered">
+                <button class="btn-discover" onclick="showMapImage()">Descobrir estação</button>
+              </div>
+            </div>
+
+            <div class="show-image" id="map-image">
+              <img src="../images/map1.jpg" alt="mapa">
             </div>
         </div>
+
+        <div class="routes">
+          <div class="route route-x">
+            <h2 class="route-name text-route-x">Rota X</h2>
+            <img src="../icons/train-purple.png" class="train-icon route-x">
+            <div class="line text-route-x">
+              <i class="bi bi-caret-left-fill"></i>
+              <div class="route-line bg-route-x"></div>
+              <i class="bi bi-caret-right-fill"></i>
+            </div>
+          </div>
+        </div>
     </main>
-  
+
   <footer>
     <nav>
       <ul id="menu">

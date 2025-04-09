@@ -1,7 +1,12 @@
-const mapa = document.getElementById("mapa")
-const estacaoBtn = document.getElementById("nao-sei-estacao")
-console.log(mapa, estacaoBtn)
+const map = document.getElementById("mapa")
+const mapImg = document.getElementById("map-image")
 
-estacaoBtn.addEventListener("click", function () {
-  mapa.classList.toggle("hidden")
-})
+const showMap = () => {
+  map.classList.toggle("hidden")
+  mapImg.classList.add("hidden")
+  console.log(map, mapImg)
+};
+
+const showMapImage = () => {
+  mapImg.classList.toggle("hidden")
+}

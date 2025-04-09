@@ -60,20 +60,140 @@ main {
 
 #mapa {
   margin-top: 15px;
-  border-radius: 5px;
+  width: 440px;
+  justify-self: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: .5rem;
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 .mapa-form {
   display: flex;
+  border: solid 2px #fdb833;
+  border-radius: 15px;
+  width: 440px;
+  padding: .6rem 1.5rem;
   flex-direction: column;
-  gap: .4rem;
+  gap: 1rem;
 }
 
 .row {
   display: flex;
-  justify-content: space-evenly;
-} 
+  justify-content: space-between;
+  width: 100%;
+}
+
+.form-item input {
+  background-color: #1c1c1c;
+  padding: .5rem;
+  border: solid 1px black;
+  border-radius: 10rem;
+  color: white;
+}
+
+.row-centered {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-discover {
+  background-color: black;
+  color: #fdb833;
+  border: none;
+  padding: .5rem .8rem;
+  border-radius: 10rem;
+  margin-top: .5rem;
+}
+
+
+#map-image {
+  width: 440px;
+  display: flex;
+  justify-content: center;
+}
+
+
+#map-image img {
+  width: 85%;
+  object-fit: fill;
+  border: solid 2px #fdb833;
+  border-radius: 15px;
+}
+
+.routes {
+  padding: .4rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.route {
+  display: flex;
+  flex-direction: column;
+  gap: .2rem;
+}
+
+.route-x {
+  color: #9739c8;
+}
+
+.route-name {
+  color: #9739c8;
+  font-size: 1.45rem;
+}
+
+.train-icon {
+  width: 4rem;
+}
+
+.line {
+  display: flex;
+  width: 100%;
+  align-self: center;
+  align-items: center;
+}
+
+.text-route-x {
+  color: #9739c8;
+}
+
+.text-route-y {
+  color: #7364d2;
+}
+
+.text-route-z {
+  color: #56ab91;
+}
+
+.bg-route-x {
+  background-color: #9739c8;
+}
+
+.bg-route-y {
+  background-color: #7364d2;
+}
+
+.bg-route-z {
+  background-color: #56ab91;
+}
+
+.route-line {
+  width: 100%;
+  height: 4px;
+}
+
+.bi-caret-left-fill {
+  position: relative;
+  left: 10px;
+  top: 1px;
+}
+
+.bi-caret-right-fill {
+  position: relative;
+  right: 10px;
+  top: 1px;
+}
