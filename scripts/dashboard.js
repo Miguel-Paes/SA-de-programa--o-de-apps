@@ -10,3 +10,26 @@ const showMap = () => {
 const showMapImage = () => {
   mapImg.classList.toggle("hidden")
 }
+
+//pontos da rotas
+
+const points = [
+  {
+    id: 1,
+    name: "Ponto A",
+  },
+
+  {
+    id: 2,
+    name: "Ponto B",
+  },
+
+  {
+    id: 3,
+    name: "Ponto C",
+  }
+];
+
+for (let i = 0; i <= points.length; i++) {
+  document.write(points[i].name)
+}

@@ -129,6 +129,7 @@ main {
   padding: .4rem;
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
 
 .route {
