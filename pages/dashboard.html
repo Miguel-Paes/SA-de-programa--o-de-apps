@@ -11,140 +11,142 @@
 <body>
 
   <div class="cell">
-    <header>
-      <div class="phone-top-bar">
-        <span class="time">12:00</span>
-        <span class="battery bi bi-battery-full"></span>
-      </div>
-
-      <div class="top-bar">
-        <h2>Smart Cities</h2>
-      </div>
-    </header>
+    <div class="container">
+      <header>
+        <div class="phone-top-bar">
+          <span class="time">12:00</span>
+          <span class="battery bi bi-battery-full"></span>
+        </div>
+  
+        <div class="top-bar">
+          <h2>Smart Cities</h2>
+        </div>
+      </header>
+      
+      <main>
+        <div class="estacao-info">
+          <div class="input-estacao">
+            <div class="input">
+              <i class="bi bi-search"></i>
+              <select name="Estação" id="estacao-select">
+                <option value="estacao1">Estação 1</option>
+                <option value="estacao2">Estação 2</option>
+                <option value="estacao3">Estação 3</option>
+                <option value="estacao4">Estação 4</option>
+              </select>
+            </div>
+            <button id="search-button">Search</button>
+          </div>
     
-    <main>
-      <div class="estacao-info">
-        <div class="input-estacao">
-          <div class="input">
-            <i class="bi bi-search"></i>
-            <select name="Estação" id="estacao-select">
-              <option value="estacao1">Estação 1</option>
-              <option value="estacao2">Estação 2</option>
-              <option value="estacao3">Estação 3</option>
-              <option value="estacao4">Estação 4</option>
-            </select>
+          <div class="nao-sei-estacao-btn">
+            <button onclick="showMap()" id="nao-sei-estacao">Não sei a estação</button>
           </div>
-          <button id="search-button">Search</button>
         </div>
   
-        <div class="nao-sei-estacao-btn">
-          <button onclick="showMap()" id="nao-sei-estacao">Não sei a estação</button>
-        </div>
-      </div>
-
-      <div id="mapa" class="hidden">
-        <div class="mapa-form">
-          <div class="row">
-            <div class="form-item">
-              <input type="text" class="form-input" placeholder="CEP">
-            </div>
-  
-            <div class="form-item">
-              <input type="text" class="form-input" placeholder="Número">
-            </div>
-          </div>
-  
-          <div class="row">
-            <div class="form-item">
-              <input type="text" class="form-input" placeholder="Cidade">
-            </div>
-          
-  
-            <div class="form-item">
-              <input type="text" class="form-input" placeholder="Bairro">
-            </div>
-          </div>
-  
+        <div id="mapa" class="hidden">
+          <div class="mapa-form">
             <div class="row">
               <div class="form-item">
-                <input type="text" class="form-input" placeholder="Rua">
+                <input type="text" class="form-input" placeholder="CEP">
               </div>
     
               <div class="form-item">
-                <input type="text" class="form-input" placeholder="Complemento">
+                <input type="text" class="form-input" placeholder="Número">
               </div>
             </div>
-  
+    
+            <div class="row">
+              <div class="form-item">
+                <input type="text" class="form-input" placeholder="Cidade">
+              </div>
+            
+    
+              <div class="form-item">
+                <input type="text" class="form-input" placeholder="Bairro">
+              </div>
+            </div>
+    
               <div class="row">
                 <div class="form-item">
-                  <input type="text" class="form-input" placeholder="Ponto de Referência">
+                  <input type="text" class="form-input" placeholder="Rua">
                 </div>
       
                 <div class="form-item">
-                  <input type="text" class="form-input" placeholder="Hora de Saída">
+                  <input type="text" class="form-input" placeholder="Complemento">
                 </div>
               </div>
-
-              <div class="row-centered">
-                <button class="btn-discover" onclick="showMapImage()">Descobrir estação</button>
+    
+                <div class="row">
+                  <div class="form-item">
+                    <input type="text" class="form-input" placeholder="Ponto de Referência">
+                  </div>
+        
+                  <div class="form-item">
+                    <input type="text" class="form-input" placeholder="Hora de Saída">
+                  </div>
+                </div>
+  
+                <div class="row-centered">
+                  <button class="btn-discover" onclick="showMapImage()">Descobrir estação</button>
+                </div>
+              </div>
+  
+              <div class="show-image" id="map-image">
+                <img src="../images/map1.jpg" alt="mapa">
+              </div>
+          </div>
+  
+          <div class="routes">
+            <div class="route route-x">
+              <h2 class="route-name text-route-x">Rota X</h2>
+              <img src="../icons/train-purple.png" class="train-icon route-x">
+              <div class="line text-route-x">
+                <i class="bi bi-caret-left-fill"></i>
+                <div class="route-line bg-route-x"></div>
+                <i class="bi bi-caret-right-fill"></i>
               </div>
             </div>
-
-            <div class="show-image" id="map-image">
-              <img src="../images/map1.jpg" alt="mapa">
+  
+            <div class="route route-y">
+              <h2 class="route-name text-route-y">Rota Y</h2>
+              <img src="../icons/train-blue.png" class="train-icon route-y">
+              <div class="line text-route-y">
+                <i class="bi bi-caret-left-fill"></i>
+                <div class="route-line bg-route-y"></div>
+                <i class="bi bi-caret-right-fill"></i>
+              </div>
             </div>
+  
+            <div class="route route-z">
+              <h2 class="route-name text-route-z">Rota Z</h2>
+              <img src="../icons/train-green.png" class="train-icon route-z">
+              <div class="line text-route-z">
+                <i class="bi bi-caret-left-fill"></i>
+                <div class="route-line bg-route-z"></div>
+                <i class="bi bi-caret-right-fill"></i>
+              </div>
+            </div>
+          </div>
+      </main>
+  
+    <footer>
+      <nav>
+        <ul id="menu">
+            <li class="menu-item bi bi-columns-gap selected"></li>
+            <li class="menu-item bi bi-geo-alt"></li>
+            <li class="menu-item bi bi-gear"></li>
+            <li class="menu-item bi bi-file-text"></li>
+            <li class="menu-item bi bi-bell"></li>
+        </ul>
+      </nav>
+  
+      <div class="phone-bottom-bar">
+        <div class="black">
+          <div class="white"></div>
         </div>
-
-        <div class="routes">
-          <div class="route route-x">
-            <h2 class="route-name text-route-x">Rota X</h2>
-            <img src="../icons/train-purple.png" class="train-icon route-x">
-            <div class="line text-route-x">
-              <i class="bi bi-caret-left-fill"></i>
-              <div class="route-line bg-route-x"></div>
-              <i class="bi bi-caret-right-fill"></i>
-            </div>
-          </div>
-
-          <div class="route route-y">
-            <h2 class="route-name text-route-y">Rota Y</h2>
-            <img src="../icons/train-blue.png" class="train-icon route-y">
-            <div class="line text-route-y">
-              <i class="bi bi-caret-left-fill"></i>
-              <div class="route-line bg-route-y"></div>
-              <i class="bi bi-caret-right-fill"></i>
-            </div>
-          </div>
-
-          <div class="route route-z">
-            <h2 class="route-name text-route-z">Rota Z</h2>
-            <img src="../icons/train-green.png" class="train-icon route-z">
-            <div class="line text-route-z">
-              <i class="bi bi-caret-left-fill"></i>
-              <div class="route-line bg-route-z"></div>
-              <i class="bi bi-caret-right-fill"></i>
-            </div>
-          </div>
-        </div>
-    </main>
-
-  <footer>
-    <nav>
-      <ul id="menu">
-          <li class="menu-item bi bi-columns-gap selected"></li>
-          <li class="menu-item bi bi-geo-alt"></li>
-          <li class="menu-item bi bi-gear"></li>
-          <li class="menu-item bi bi-file-text"></li>
-          <li class="menu-item bi bi-bell"></li>
-      </ul>
-    </nav>
-
-    <div class="phone-bottom-bar">
-      <div class="black">
-        <div class="white"></div>
       </div>
+    </footer>
     </div>
-  </footer>
   </div>  
   
 
